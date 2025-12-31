@@ -782,8 +782,7 @@ export class InputHandler {
     }
     const now = this.getNow();
     const isDuplicate =
-      now - this.lastPasteTime < InputHandler.BEFORE_INPUT_IGNORE_MS &&
-      this.lastPasteData === data;
+      now - this.lastPasteTime < InputHandler.BEFORE_INPUT_IGNORE_MS && this.lastPasteData === data;
     if (isDuplicate) {
       this.lastPasteData = null;
       this.lastPasteSource = null;
